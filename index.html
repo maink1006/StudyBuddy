@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7e9e6">
+  <meta name="description" content="A cozy Cherry Grove study companion with quests, focus sessions, XP, room decor and statistics.">
+  <title>Study Buddy — Cherry Grove</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#home" aria-label="Study Buddy home" data-page="home">
+        <span class="brand-mark">🍒</span>
+        <span><strong>Study Buddy</strong><small>CHERRY GROVE</small></span>
+      </a>
+
+      <div class="sidebar-world">
+        <span class="pixel-sun">✦</span>
+        <div><strong>Your little world</strong><small>One block at a time</small></div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <p class="nav-label">YOUR SPACE</p>
+        <button class="nav-link active" data-page="home"><span>⌂</span> Home</button>
+        <button class="nav-link" data-page="tasks"><span>▤</span> Quest board <i id="nav-task-count">0</i></button>
+        <button class="nav-link" data-page="pomodoro"><span>◷</span> Focus session</button>
+        <button class="nav-link" data-page="room"><span>▦</span> My room</button>
+        <p class="nav-label nav-label-spaced">YOUR JOURNEY</p>
+        <button class="nav-link" data-page="achievements"><span>✧</span> Achievements</button>
+        <button class="nav-link" data-page="statistics"><span>▥</span> Statistics</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="profile-avatar">🐈</div>
+          <div class="profile-copy"><strong>Cherry learner</strong><small id="sidebar-level">Level 1 · Seedling</small></div>
+          <span class="profile-sparkle">✦</span>
+        </div>
+        <div class="sidebar-xp"><div class="xp-track"><span id="sidebar-xp-fill"></span></div><small id="sidebar-xp-text">0 / 100 XP</small></div>
+        <button class="nav-link settings-link" data-page="settings"><span>⚙</span> Settings</button>
+      </div>
+    </aside>
+
+    <main class="main-shell">
+      <header class="topbar">
+        <div class="breadcrumb"><span>OVERWORLD</span><b>›</b><strong id="current-location">Cherry Grove</strong></div>
+        <div class="topbar-right">
+          <div class="coin-pill"><span>✦</span><strong id="coin-count">25</strong><small>GEMS</small></div>
+          <button class="icon-button sound-top-button" id="sound-toggle" aria-label="Toggle ambient music" title="Toggle ambient music">♫</button>
+          <div class="top-avatar">🐈</div>
+        </div>
+      </header>
+
+      <section id="app-content" class="page-content" aria-live="polite"></section>
+      <footer class="app-footer"><span>✿</span> Made for slow mornings and little victories <span>✿</span></footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
